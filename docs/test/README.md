@@ -1,17 +1,23 @@
 # Тестування працездатності системи
 
+## Запуск сервера
+<img src="./Снимок экрана 2024-01-05 в 1.58.16 PM.png" alt="">
+
 ## Створення файла (**Post** запит)
-<img src="./images/post.jpg" alt="">
+<img src="./photo_5240500889221978983_w.jpg" alt="">
 
 ## Отримання даних (**Get** запит)
-<img src="./images/get.jpg" alt="">
+<img src="./photo_5240500889221978985_w.jpg" alt="">
 
 ## Оновлення даних (**Put** запит)
-<img src="./images/put.jpg" alt="">
+<img src="./photo_5240500889221978986_w.jpg" alt="">
+
+## Отримання оновлених даних (**Get** запит)
+<img src="./photo_5240500889221978987_w.jpg" alt="">
 
 ## Видалення файлу (**Delete** запит)
-<img src="./images/delete.jpg" alt="">
+<img src="./photo_5240500889221978988_w.jpg" alt="">
 
 ## Видалення неіснуючого файлу (**Delete** запит Error)
-<img src="./images/del_err.jpg" alt="">
+<img src="./photo_5240500889221978989_w.jpg" alt="">
 

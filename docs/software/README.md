@@ -1,3 +1,5 @@
+# SQL-скрипт для створення початкового наповнення бази даних
+
 ```sql
 -- MySQL Workbench Forward Engineering
 
@@ -183,20 +185,17 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 const express = require("express");
 const cors = require("cors");
 const router = require("./routes/index.js");
-const AppError = require("./utils/appError");
-const errorHandler = require("./utils/errorHandler");
-
+const AppError = require("./utils/appError.js");
+const errorHandler = require("./utils/errorHandler.js");
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 app.use(router);
-
 app.all("*", (req, res, next) => {
     next(new AppError(`The URL ${req.originalUrl} does not exists`, 404));
 });
 app.use(errorHandler);
-
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
@@ -211,7 +210,7 @@ const mysql = require("mysql2");
 const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "10152025",
+    password: "123123",
     database: "lab4",
 });
 
@@ -238,8 +237,8 @@ module.exports = router;
 
 #### Контроллери
 ```js
-const AppError = require("../utils/appError");
-const conn = require("../services/db");
+const AppError = require("../utils/appError.js");
+const conn = require("../services/db.js");
 
 exports.getAllFiles = (req, res, next) => {
     conn.query("SELECT * FROM file", function (err, data, fields) {
@@ -306,8 +305,6 @@ exports.updateFile = (req, res, next) => {
             req.body.file_upload,
             req.body.file_format,
             req.params.id,
-
-
         ],
         function (err, data, fields) {
             if (err) return next(new AppError(err, 500));
